@@ -15,7 +15,7 @@ function request($url){
 		CURLOPT_CUSTOMREQUEST => "GET",
 		CURLOPT_HTTPHEADER => array(
 			"x-rapidapi-host: covid-19-data.p.rapidapi.com",
-			"x-rapidapi-key: 6f45e45d1emshf0080c75c70bd49p1493efjsndd68f5f0fbb0"
+			"x-rapidapi-key: YOUR_API_KEY"
 		),
 	));
 
@@ -42,7 +42,7 @@ $date = getDate($strtime);
 <html>
 <head>
 	<title>Coronavirus Statistic in <?php echo $data["0"]["country"] ?></title>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH7DcbV5Z12VIi-pXvrYnHvmJS_FEPu-E&callback=initMap" async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 	<script type="text/javascript">
 	function initMap() {
 		var map = new google.maps.Map(document.getElementById('show_maps'), {
